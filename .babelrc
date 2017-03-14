@@ -5,5 +5,14 @@
     "transform-object-rest-spread",
     "transform-class-properties",
     "transform-es2015-classes"
-  ]
+  ],
+  "env": {
+    "production": {
+      "plugins": [
+        "transform-react-constant-elements",
+        "transform-react-inline-elements",
+        "transform-react-remove-prop-types"
+      ]
+    }
+  }
 }

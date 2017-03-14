@@ -1,22 +1,40 @@
-require('webpack');
+const autoprefixer = require('autoprefixer');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
-const autoprefixer = require('autoprefixer');
+const webpack = require('webpack');
+
+const env = process.env.NODE_ENV === 'production' ? 'production' : 'development';
+const isProduction = env === 'production'
+const plugins = isProduction
+  ? [new webpack.optimize.UglifyJsPlugin(), new webpack.optimize.OccurrenceOrderPlugin()]
+  : [];
+
 
 const config = {
   context: path.join(__dirname, './'), // `__dirname` is root of project and `src` is source
   entry: {
     app: './src/index.js',
+    vendor: ['react', 'react-dom', 'redux', 'react-redux', 'react-router-dom', 'babel-polyfill'],
   },
   output: {
     path: path.join(__dirname, '/dist'), // `dist` is the destination
     filename: '[name].bundle.js',
+    sourceMapFilename: '[file].map'
   },
+  devtool: isProduction ? 'source-map' : 'cheap-module-eval-source-map',
   devServer: {
     open: true, // to open the local server in browser
     contentBase: path.join(__dirname, './'),
     historyApiFallback: true,
-    //noInfo: true,
+    stats: {
+      colors: true,
+      assets: true,
+      version: false,
+      hash: false,
+      timings: true,
+      chunks: false,
+      chunkModules: false,
+    }
   },
   module: {
     rules: [
@@ -47,7 +65,19 @@ const config = {
       }
     ]
   },
-  plugins: [new HtmlWebpackPlugin({ template: 'index.html' })]
+  plugins: plugins.concat([
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify(env)
+      }
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor',
+      minChunks: Infinity,
+      filename: '[name].[hash].js',
+    }),
+    new HtmlWebpackPlugin({ template: 'index.html' })
+  ])
 };
 
 module.exports = config;
