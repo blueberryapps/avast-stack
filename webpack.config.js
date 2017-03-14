@@ -15,6 +15,7 @@ const config = {
   devServer: {
     open: true, // to open the local server in browser
     contentBase: path.join(__dirname, './'),
+    historyApiFallback: true,
     //noInfo: true,
   },
   module: {
