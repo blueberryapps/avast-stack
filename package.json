@@ -9,12 +9,12 @@
     "npm": ">=3.10"
   },
   "scripts": {
-    "eslint": "eslint .",
+    "eslint": "eslint ./src",
     "start": "webpack-dev-server --hot --inline",
     "build": "webpack",
     "build:prod": "NODE_ENV=production webpack",
     "jest": "jest",
-    "test": "jest"
+    "test": "yarn eslint && yarn jest"
   },
   "author": "Ondrej Bartas <ondrej@bartas.cz>",
   "license": "MIT",
