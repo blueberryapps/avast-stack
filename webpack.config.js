@@ -1,6 +1,7 @@
 require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
+const autoprefixer = require('autoprefixer');
 
 const config = {
   context: path.join(__dirname, '/src'), // `__dirname` is root of project and `src` is source
@@ -28,7 +29,13 @@ const config = {
         test: /\.(css)$/,
         use: [
           'style-loader',
-          'css-loader',
+          'css-loader?importLoaders=1',
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: () => ([autoprefixer])
+            }
+          }
         ]
       }
     ]
