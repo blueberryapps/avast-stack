@@ -1,17 +1,14 @@
 import 'babel-polyfill';
 import React from 'react';
 import ReactDom from 'react-dom';
+import { Provider } from 'react-redux';
+import App from './App';
+import store from './store';
 import './index.css';
-import logo from '../assets/logo-avast.png';
-
-const App = () => (
-  <div>
-    <h1>Avast Stack</h1>
-    <img src={logo} />
-  </div>
-);
 
 ReactDom.render(
-  <App />,
+  <Provider store={store}>
+    <App />
+  </Provider>,
   window.document.getElementById('root')
 );
