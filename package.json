@@ -1,0 +1,8 @@
+{
+  "name": "avast-stack",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {},
+  "author": "Ondrej Bartas <ondrej@bartas.cz>",
+  "license": "MIT"
+}
