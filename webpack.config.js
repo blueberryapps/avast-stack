@@ -4,9 +4,9 @@ const path = require('path');
 const autoprefixer = require('autoprefixer');
 
 const config = {
-  context: path.join(__dirname, '/src'), // `__dirname` is root of project and `src` is source
+  context: path.join(__dirname, './'), // `__dirname` is root of project and `src` is source
   entry: {
-    app: './index.js',
+    app: './src/index.js',
   },
   output: {
     path: path.join(__dirname, '/dist'), // `dist` is the destination
@@ -14,7 +14,7 @@ const config = {
   },
   devServer: {
     open: true, // to open the local server in browser
-    contentBase: path.join(__dirname, '/src'),
+    contentBase: path.join(__dirname, './'),
     //noInfo: true,
   },
   module: {
@@ -24,6 +24,12 @@ const config = {
         use: [{
           loader: 'babel-loader'
         }]
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        use: [
+          'file-loader?name=/assets/[name].[ext]'
+        ],
       },
       {
         test: /\.(css)$/,
