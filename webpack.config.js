@@ -14,8 +14,17 @@ const config = {
   devServer: {
     open: true, // to open the local server in browser
     contentBase: path.join(__dirname, '/src'),
-    noInfo: true,
-    hot: true
+    //noInfo: true,
+  },
+  module: {
+    rules: [
+      {
+        test: /\.(js|jsx)$/,
+        use: [{
+          loader: 'babel-loader'
+        }]
+      }
+    ]
   },
   plugins: [new HtmlWebpackPlugin({ template: 'index.html' })]
 };
