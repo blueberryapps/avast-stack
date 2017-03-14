@@ -10,7 +10,7 @@
   },
   "scripts": {
     "eslint": "eslint .",
-    "start": "webpack-dev-server",
+    "start": "webpack-dev-server --hot --inline",
     "build": "webpack",
     "build:prod": "webpack -p",
     "jest": "jest",

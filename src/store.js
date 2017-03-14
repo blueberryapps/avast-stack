@@ -10,8 +10,10 @@ const allMiddlewares = window.devToolsExtension
   ? compose(middlewares, window.devToolsExtension())
   : middlewares;
 
-export default createStore(
+const store = createStore(
   combineReducers(reducers),
   initialState,
   allMiddlewares
 );
+
+export default store;
