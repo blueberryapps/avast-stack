@@ -18,7 +18,8 @@ const config = {
   output: {
     path: path.join(__dirname, '/dist'), // `dist` is the destination
     filename: '[name].bundle.js',
-    sourceMapFilename: '[file].map'
+    sourceMapFilename: '[file].map',
+    publicPath: '/'
   },
   devtool: isProduction ? 'source-map' : 'cheap-module-eval-source-map',
   devServer: {
@@ -47,7 +48,7 @@ const config = {
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
         use: [
-          'file-loader?name=/assets/[name].[ext]'
+          'file-loader?name=assets/[name].[ext]'
         ],
       },
       {
