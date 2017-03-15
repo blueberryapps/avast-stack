@@ -4,6 +4,10 @@
   "private": true,
   "main": "index.js",
   "repository": {},
+  "authors": [
+    "ondrejbartas",
+    "TondaHack"
+  ],
   "engines": {
     "node": ">=6.9",
     "npm": ">=3.10"

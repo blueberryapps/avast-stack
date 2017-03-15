@@ -1,3 +1,13 @@
+# Avast Stack
+
+## Getting started
+
+```
+git clone git@github.com:blueberryapps/avast-stack.git
+cd avast-stack
+yarn install
+yarn start
+```
 
 ## Testing
 
