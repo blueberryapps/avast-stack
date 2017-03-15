@@ -18,6 +18,7 @@
     "build": "webpack",
     "build:prod": "NODE_ENV=production webpack",
     "jest": "jest",
+    "jest:dev": "jest --watch",
     "test": "yarn eslint && yarn jest"
   },
   "author": "Ondrej Bartas <ondrej@bartas.cz>",
