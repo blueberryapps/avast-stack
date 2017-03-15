@@ -48,7 +48,7 @@ export function get(path) {
 export function post(path, body = {}) {
   const url = makeUrl(path);
 
-  return fetchData(url, 'POST', body);
+  return fetchData(url, 'POST', body).then(res => res.json());
 }
 
 export function del(path) {
@@ -60,5 +60,5 @@ export function del(path) {
 export function put(path, body = {}) {
   const url = makeUrl(path);
 
-  return fetchData(url, 'PUT', body);
+  return fetchData(url, 'PUT', body).then(res => res.json());
 }
