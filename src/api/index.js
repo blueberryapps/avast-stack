@@ -1,4 +1,4 @@
-import fetch from 'whatwg-fetch';
+import 'whatwg-fetch';
 import cookie from 'js-cookie';
 
 export const ACCESS_TOKEN = 'access-token';
@@ -18,7 +18,7 @@ function getHeaders() {
 }
 
 export function fetchData(url, type = 'GET', body) {
-  return fetch(url, {
+  return window.fetch(url, {
     method: type,
     headers: getHeaders(),
     body: body ? JSON.stringify(body) : undefined,

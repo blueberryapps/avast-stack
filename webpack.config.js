@@ -68,7 +68,7 @@ const config = {
   plugins: plugins.concat([
     new webpack.DefinePlugin({
       'process.env': {
-        BASE_URL: JSON.stringify(process.env.BASE_URL)
+        BASE_URL: JSON.stringify(process.env.BASE_URL),
         NODE_ENV: JSON.stringify(env)
       }
     }),
