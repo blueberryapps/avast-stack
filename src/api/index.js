@@ -1,7 +1,7 @@
 import fetch from 'whatwg-fetch';
 import cookie from 'js-cookie';
 
-const ACCESS_TOKEN = 'access-token';
+export const ACCESS_TOKEN = 'access-token';
 const baseUrl = process.env.BASE_URL || 'http://localhost:3600';
 
 function getHeaders() {
