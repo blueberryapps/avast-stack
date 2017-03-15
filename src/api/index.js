@@ -27,7 +27,7 @@ export function fetchData(url, type = 'GET', body) {
       if (response.status === 401) {
         cookie.remove(ACCESS_TOKEN);
         if (window) {
-          window.location.href = './login';
+          window.location.href = '/login';
         }
         throw new Error(response);
       }
