@@ -15,8 +15,9 @@
   "scripts": {
     "eslint": "eslint ./src",
     "start": "webpack-dev-server --hot --inline",
-    "build": "webpack",
-    "build:prod": "NODE_ENV=production webpack",
+    "build": "yarn build:clean && webpack",
+    "build:clean": "rimraf dist",
+    "build:prod": "yarn build:clean && NODE_ENV=production webpack",
     "jest": "jest",
     "jest:dev": "jest --watch",
     "test": "yarn eslint && yarn jest"
@@ -65,6 +66,7 @@
     "eslint-plugin-react": "^6.10.0",
     "jest": "^19.0.2",
     "react-addons-test-utils": "^15.4.2",
+    "rimraf": "^2.6.1",
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.4.2"
   },
