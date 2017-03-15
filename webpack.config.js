@@ -4,11 +4,10 @@ const path = require('path');
 const webpack = require('webpack');
 
 const env = process.env.NODE_ENV === 'production' ? 'production' : 'development';
-const isProduction = env === 'production'
+const isProduction = env === 'production';
 const plugins = isProduction
   ? [new webpack.optimize.UglifyJsPlugin(), new webpack.optimize.OccurrenceOrderPlugin()]
   : [];
-
 
 const config = {
   context: path.join(__dirname, './'), // `__dirname` is root of project and `src` is source
@@ -42,7 +41,8 @@ const config = {
         test: /\.(js|jsx)$/,
         use: [{
           loader: 'babel-loader'
-        }]
+        }],
+        exclude: /node_modules/
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
