@@ -12,9 +12,10 @@ const Home = () => (
   </div>
 );
 
-const About = () => (
+const About = props => (
   <div>
     <h1>About</h1>
+    {JSON.stringify(props)}
     <Link to="/">Go to Home</Link>
   </div>
 );
@@ -23,10 +24,10 @@ const App = () => (
   <Router>
     <div>
       <h1>Avast Stack</h1>
-      <Link to="/about">Go to About</Link>
+      <Link to="/about/ssss">Go to About</Link>
       <Link to="/login">Log in</Link>
       <Route exact path="/" component={Home} />
-      <Route exact path="/about" component={About} />
+      <Route exact path="/about/:super" component={About} />
       <Route exact path="/login" component={LoginForm} />
     </div>
   </Router>

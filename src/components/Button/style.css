@@ -1,15 +1,15 @@
-.Button {
+.button {
   color: white;
 }
 
-.Button-primary {
+.button-primary {
   background: blue
 }
 
-.Button-secondary {
+.button-secondary {
   background: red;
 }
 
-.Button-disabled {
+.button-disabled {
   background: gray
 }

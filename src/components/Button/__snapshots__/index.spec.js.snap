@@ -2,36 +2,36 @@
 
 exports[`<Button /> snapshots should render button with props: {"kind":"primary","disabled":false} 1`] = `
 <button
-  class="Button Button-primary"
+  class="button button-primary"
 />
 `;
 
 exports[`<Button /> snapshots should render button with props: {"kind":"primary","disabled":true} 1`] = `
 <button
-  class="Button Button-primary Button-disabled"
+  class="button button-primary button-disabled"
 />
 `;
 
 exports[`<Button /> snapshots should render button with props: {"kind":"secondary","disabled":false} 1`] = `
 <button
-  class="Button Button-secondary"
+  class="button button-secondary"
 />
 `;
 
 exports[`<Button /> snapshots should render button with props: {"kind":"secondary","disabled":true} 1`] = `
 <button
-  class="Button Button-secondary Button-disabled"
+  class="button button-secondary button-disabled"
 />
 `;
 
 exports[`<Button /> snapshots should render buttons of these kinds: ["primary","secondary"] 1`] = `
 <button
-  class="Button Button-primary"
+  class="button button-primary"
 />
 `;
 
 exports[`<Button /> snapshots should render buttons of these kinds: ["primary","secondary"] 2`] = `
 <button
-  class="Button Button-secondary"
+  class="button button-secondary"
 />
 `;

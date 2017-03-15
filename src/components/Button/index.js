@@ -5,7 +5,7 @@ const resolveClass = (...classes) => classes.filter(c => !!c).join(' ');
 
 const Button = ({ disabled, kind, children, onClick }) => (
   <button
-    className={resolveClass('Button', `Button-${kind}`, disabled && 'Button-disabled')}
+    className={resolveClass('button', `button-${kind}`, disabled && 'button-disabled')}
     onClick={onClick}
   >
     {children}
