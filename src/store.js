@@ -1,9 +1,8 @@
 import { applyMiddleware, createStore, compose, combineReducers } from 'redux';
-
-const emptyReducer = (state = { empty: 'reducer' }) => state;
+import { reducer as onionForm } from 'onion-form';
 
 const initialState = {};
-const reducers = { emptyReducer };
+const reducers = { onionForm };
 const middlewares = applyMiddleware();
 
 const allMiddlewares = window.devToolsExtension
