@@ -1,0 +1,15 @@
+.Button {
+  color: white;
+}
+
+.Button-primary {
+  background: blue
+}
+
+.Button-secondary {
+  background: red;
+}
+
+.Button-disabled {
+  background: gray
+}

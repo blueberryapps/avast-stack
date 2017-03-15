@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> snapshots should render button with props: {"kind":"primary","disabled":false} 1`] = `
+<button
+  class="Button Button-primary"
+/>
+`;
+
+exports[`<Button /> snapshots should render button with props: {"kind":"primary","disabled":true} 1`] = `
+<button
+  class="Button Button-primary Button-disabled"
+/>
+`;
+
+exports[`<Button /> snapshots should render button with props: {"kind":"secondary","disabled":false} 1`] = `
+<button
+  class="Button Button-secondary"
+/>
+`;
+
+exports[`<Button /> snapshots should render button with props: {"kind":"secondary","disabled":true} 1`] = `
+<button
+  class="Button Button-secondary Button-disabled"
+/>
+`;
+
+exports[`<Button /> snapshots should render buttons of these kinds: ["primary","secondary"] 1`] = `
+<button
+  class="Button Button-primary"
+/>
+`;
+
+exports[`<Button /> snapshots should render buttons of these kinds: ["primary","secondary"] 2`] = `
+<button
+  class="Button Button-secondary"
+/>
+`;
