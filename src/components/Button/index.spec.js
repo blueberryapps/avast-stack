@@ -8,9 +8,11 @@ import Button from './index';
 describe('<Button /> snapshots', () => {
   const kinds = ['primary', 'secondary'];
 
-  it(`should render buttons of these kinds: ${JSON.stringify(kinds)}`, () => {
-    kinds.forEach(kind => expect(render(<Button kind={kind} />)).toMatchSnapshot());
-  });
+  kinds.forEach(kind => (
+    it(`should render buttons of kind: ${kind}`, () => {
+      expect(render(<Button kind={kind} />)).toMatchSnapshot();
+    })
+  ));
 
   const testCases = [
     { kind: 'primary', disabled: true },

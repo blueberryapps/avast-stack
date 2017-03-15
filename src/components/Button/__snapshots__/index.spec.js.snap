@@ -24,13 +24,13 @@ exports[`<Button /> snapshots should render button with props: {"kind":"secondar
 />
 `;
 
-exports[`<Button /> snapshots should render buttons of these kinds: ["primary","secondary"] 1`] = `
+exports[`<Button /> snapshots should render buttons of kind: primary 1`] = `
 <button
   class="button button-primary"
 />
 `;
 
-exports[`<Button /> snapshots should render buttons of these kinds: ["primary","secondary"] 2`] = `
+exports[`<Button /> snapshots should render buttons of kind: secondary 1`] = `
 <button
   class="button button-secondary"
 />
